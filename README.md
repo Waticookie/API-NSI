@@ -15,11 +15,15 @@ Description des requêtes (endpoints et paramètres).
 Champs JSON utilisés.
 
 ## Fonctionnement du programme
-Entrées utilisateur et résultats produits.
+Entrer un intervalle de dates dans lequel le programme va rechercher les différents astéroïdes avec la distance à   la terre de chacun 
+et va renvoyer un graphique en nuage de points avec l'ensemble des astéroïdes en fonction de leur distance de la terre et va indiquer 
+si ces derniers sont potentiellement dangereux.
+
 
 ## Aide par IA
 Préciser si une IA a été utilisée et pour quels usages.
 
 ## Lancer le programme
-Commande pour exécuter le programme.
+
+
 EdhY8mJR7fLe1C99IRX6KhThkaIYXJgUJqFfDuEG

@@ -7,21 +7,27 @@ datedebut = (input("Entrez la date de début de recherche d'astéroide sous le f
 datefin = (input("Entrez la date de fin de recherche d'astéroide sous le format : YYYY-MM-DD : "))
 key = (input("Entrez votre clé d'API provenant de https://api.nasa.gov/ : "))
 
-def asteroide_en_date(datedebut, datefin, key): #cette fct retourne le nom, la dangereusité et la distance à la Terre des astéroides entre 2 dates demandées
-    res = []
+def asteroide_en_date_csv(datedebut, datefin, key):
     r = requests.get(f'https://api.nasa.gov/neo/rest/v1/feed?start_date={datedebut}&end_date={datefin}&api_key={key}')
     rdico = r.json()
     astero = rdico['near_earth_objects']
-    for date, asteroides in astero.items():
-        print(f"\n Date : {date}")
-        for a in asteroides:
-            nom = a['name']
-            dangereux = a['is_potentially_hazardous_asteroid']
-            distance = a['close_approach_data'][0]['miss_distance']['kilometers']
-            
-            print(f" L'astéroide se nomme {nom}")
-            print(f"   Est-il dangereux ? : {dangereux}")
-            print(f"   Distance la plus proche à laquelle l'astéroide a été par rapport à la Terre : {distance} km")
+
+    with open("asteroides.csv", "w", newline="", encoding="utf-8") as f:
+        writer = csv.writer(f)
+
+        # en-têtes du CSV
+        writer.writerow(["date", "nom", "dangereux", "distance_km"])
+
+        for date, asteroides in astero.items():
+            for a in asteroides:
+                nom = a['name']
+                dangereux = a['is_potentially_hazardous_asteroid']
+                distance = a['close_approach_data'][0]['miss_distance']['kilometers']
+
+                writer.writerow([date, nom, dangereux, distance])
+
+    print("Fichier 'asteroides.csv' créé avec succès")
+
 
 def distances_asteroides(datedebut, datefin, key): #cette fonction permet de retourner seulement la distance des astéroides afin de les trier dans le graphique
     r = requests.get(f'https://api.nasa.gov/neo/rest/v1/feed?start_date={datedebut}&end_date={datefin}&api_key={key}')
@@ -39,6 +45,8 @@ def distances_asteroides(datedebut, datefin, key): #cette fonction permet de ret
 
 distances = distances_asteroides(datedebut, datefin, key)
 
+print(asteroide_en_date_csv(datedebut, datefin, key))
+
 #créer un graphique avec la distance à la Terre et une ligne de danger 
 plt.figure(figsize=(10, 5)) 
 plt.scatter(range(len(distances)), distances)
@@ -48,4 +56,3 @@ plt.xlabel("Nombre d'Astéroïdes")
 plt.ylabel("Distance (km)")
 plt.grid(True)
 plt.show()
-print(asteroide_en_date(datedebut, datefin, key))

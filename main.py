@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 datedebut = (input("Entrez la date de début de recherche d'astéroide sous le format : YYYY-MM-DD : "))
-datefin = (input("Entrez la date de début de recherche d'astéroide sous le format : YYYY-MM-DD : "))
+datefin = (input("Entrez la date de fin de recherche d'astéroide sous le format : YYYY-MM-DD : "))
 key = (input("Entrez votre clé d'API provenant de https://api.nasa.gov/ : "))
 
 def asteroide_en_date(datedebut, datefin, key): #cette fct retourne le nom, la dangereusité et la distance à la Terre des astéroides entre 2 dates demandées

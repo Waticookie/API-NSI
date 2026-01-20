@@ -1,7 +1,8 @@
-# Nom du projet
+LES ASTEROIDES ET LEUR DANGEROSITE
 
 ## Objectif
-Description du besoin auquel répond le programme.
+Le programme permet de savoir la présence d'asteroïdes relativement proche de la Terre et nous indique si ces derniers sont trop proche et risquent 
+potentiellement de percuter cette derniere.
 
 ## API utilisée
 - Nom de l’API : API NASA

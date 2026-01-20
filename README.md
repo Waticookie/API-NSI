@@ -22,7 +22,7 @@ si ces derniers sont potentiellement dangereux.
 
 
 ## Aide par IA
-Préciser si une IA a été utilisée et pour quels usages.
+Nous avons utilisé l'IA afin de nous orienter dans les données de l'API et également pour nous aider à créer le graphique en triant les astéroides par distance.
 
 ## Lancer le programme
 

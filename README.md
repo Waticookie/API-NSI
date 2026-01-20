@@ -4,9 +4,9 @@
 Description du besoin auquel répond le programme.
 
 ## API utilisée
-- Nom de l’API :
-- Lien vers la documentation :
-- Justification du choix :
+- Nom de l’API : API NASA
+- Lien vers la documentation : https://api.nasa.gov/
+- Justification du choix : on aime bien l'espace :)
 
 ## Requêtes effectuées
 Description des requêtes (endpoints et paramètres).

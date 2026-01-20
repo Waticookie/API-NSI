@@ -10,7 +10,7 @@ potentiellement de percuter cette derniere.
 - Justification du choix : on aime bien l'espace :)
 
 ## Requêtes effectuées
-Description des requêtes (endpoints et paramètres).
+On cherche dans l'API le nom, la distance à la terre et la date à laquelle les astéroides passent. (endpoints et paramètres).
 
 ## Données exploitées
 Champs JSON utilisés.

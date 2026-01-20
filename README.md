@@ -13,7 +13,7 @@ potentiellement de percuter cette derniere.
 On cherche dans l'API le nom, la distance à la terre et la date à laquelle les astéroides passent. (endpoints et paramètres).
 
 ## Données exploitées
-Champs JSON utilisés.
+Nous avons utilisé JSON afin de lire les informations de l'API sous forme de dictionnaire
 
 ## Fonctionnement du programme
 Entrer un intervalle de dates dans lequel le programme va rechercher les différents astéroïdes avec la distance à   la terre de chacun 
